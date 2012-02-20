@@ -4,7 +4,7 @@ namespace Pegas\Mongo;
 
 use MongoCursor;
 
-class Paginator
+class MongoPaginator
 {
     private $page;
     private $pageSize;
