@@ -1,6 +1,6 @@
 <?php
 
-namespace Pegas\Mongo;
+namespace Mongo;
 
 use Mongo;
 use Silex\Application;
