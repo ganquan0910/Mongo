@@ -1,0 +1,6 @@
+{
+    "name": "pegas/mongo",
+    "autoload": {
+        "psr-0": { "Pegas\\Mongo": "." }
+    }
+}
