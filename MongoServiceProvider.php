@@ -21,4 +21,8 @@ class MongoServiceProvider implements ServiceProviderInterface
             return $app['mongo.connection']->selectDb($app['mongo.default_database']);
         });
     }
+
+    public function boot(Application $app)
+    {
+    }
 }
