@@ -1,5 +1,5 @@
 {
-    "name": "pegas/mongo",
+    "name": "pegas/mongo-service-provider",
     "autoload": {
         "psr-0": { "Pegas\\Mongo": "" }
     },
