@@ -48,18 +48,24 @@ class MongoPaginator
     {
         $margin = ceil(($this->period - 1) / 2);
 
-        $start = $this->page - $margin;
+        $start = (int)$this->page - $margin;
+
         if ($start <= 0) {
             $start = 1;
         }
 
         $end = $start + $this->period - 1;
+
         if ($end > $this->lastPage) {
             $end = $this->lastPage;
         }
 
-        if ($end - $start < $this->period && $start > 1) {
+        if ($end - $start < $this->period && $start > 1 && $end > $this->period) {
             $start = $end - $this->period + 1;
+        }
+
+        if ($end < $this->period) {
+            $start = 1;
         }
 
         return range($start, $end);
